@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TODO App</title>
+  <link rel="stylesheet" href="/styles/todos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TODO App</h1>
+        <h3>Add TODO</h3>
+        <form method="POST" action="/todos">
+          <input type="text" name="todo" placeholder="Enter a TODO" required>
+          <button type="submit">Add TODO</button>
+        </form>
+        <ul>
+        <% todos.forEach((todo, index) => { %>
+            <li>
+                <span class="todo-text"><%= todo %></span>
+                <form method="POST" action="/todos/<%= index %>?_method=DELETE" style="display:inline">
+                    <button type="submit">Delete</button>
+                </form>
+                <form method="GET" action="/todos/<%= index %>/edit" style="display:inline">
+                    <button type="submit">Edit</button>
+                </form>
+            </li>
+        <% }) %>
+        </ul>
+    </div>
+</body>
+</html>

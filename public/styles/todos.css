@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #eceb8e;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr); /* Three equal-height rows */
+    gap: 1rem; /* Gap between grid items */
+  }
+  
+  h1 {
+    font-size: 3rem;
+    color: #333;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    font-size: 2rem;
+    color: #111010;
+    margin-bottom: 1rem;
+  }
+  
